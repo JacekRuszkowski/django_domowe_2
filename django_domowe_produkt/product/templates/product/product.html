@@ -1,0 +1,19 @@
+{% extends "product/base.html" %}
+
+{% block content %}
+    <p>Product name:</p>
+    <p> {{ product.title }} </p>
+    <br>
+    <p>Description:</p>
+    <p> {{ product.description }} </p>
+    <br>
+    <p>Price:</p>
+    <p> {{ product.price }} </p>
+    <br>
+    <p>Status:</p>
+    {% if product.is_available == True %}
+        <p>Available</p>
+    {% else %}
+        <p> Product not available</p>
+    {% endif %}
+{% endblock content %}
