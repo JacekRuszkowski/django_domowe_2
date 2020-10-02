@@ -4,10 +4,6 @@ from .models import Product
 # Create your views here.
 
 
-def product_view(request):
-    content = {'product': Product.objects.first()}
-    return render(request, 'product/product.html', content)
-
 
 def product_detail(request, pk):
     product = get_object_or_404(Product, pk=pk)

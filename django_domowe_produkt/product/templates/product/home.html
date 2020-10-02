@@ -3,14 +3,18 @@
 {% block content %}
 
    {% for product in all_products %}
-        <p><a href="{% url 'product-detail' pk=product.pk %}">{{ product.title }}</a></p>
-        <p>{{ product.price }} zł</p>
-        {% if product.is_available == True %}
-            <p>Available</p>
-        {% else %}
-            <p>Not available</p>
-        {% endif %}
-        <br>
+          <article class="media content-section">
+              <div class="media-body">
+                    <p><a href="{% url 'product-detail' pk=product.pk %}">{{ product.title }}</a></p>
+                    <p>{{ product.price }} zł</p>
+                    {% if product.is_available == True %}
+                        <p>Available</p>
+                    {% else %}
+                        <p>Not available</p>
+                    {% endif %}
+                    <br>
+              </div>
+          </article>
     {% endfor %}
 
 {% endblock content %}
