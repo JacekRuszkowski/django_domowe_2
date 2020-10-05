@@ -1,0 +1,11 @@
+{% extends "product/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <h5>You are logged out</h5>
+    <div class="border-top pt-3">
+        <small><a href="{% url 'login' %}">Login again</a></small>
+        <small>|</small>
+        <small><a href="{% url 'all-products' %}">Back to main page</a></small>
+    </div>
+{% endblock content %}

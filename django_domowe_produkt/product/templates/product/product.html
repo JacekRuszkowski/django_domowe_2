@@ -16,4 +16,7 @@
     {% else %}
         <p> Product not available</p>
     {% endif %}
+    {% if user.is_authenticated %}
+        <button class="btn btn-info">Edit</button>
+    {% endif %}
 {% endblock content %}

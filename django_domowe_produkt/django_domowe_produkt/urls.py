@@ -20,6 +20,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('product.urls')),
-    path('login/', log_views.LoginView.as_view(), name='login'),
-    path('logout/', log_views.LogoutView.as_view(), name='logout'),
+    path('login/', log_views.LoginView.as_view(template_name='product/login.html'), name='login'),
+    path('logout/', log_views.LogoutView.as_view(template_name='product/logout.html'), name='logout'),
 ]
