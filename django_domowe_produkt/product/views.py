@@ -13,6 +13,11 @@ def home(request):
     content = {'all_products': Product.objects.all()}
     return render(request, 'product/home.html', content)
 
+def redirect_edit(request):
+    return render(request, 'product/edit.html')
+
+
+
 """
 Dorobić przycisk edytuj.
 Po kliknięciu, jeśłi niezalogowany przenosi na stronę logowania.
