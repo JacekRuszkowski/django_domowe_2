@@ -17,8 +17,11 @@ Including another URLconf
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('product/<int:pk>/', views.product_detail, name='product-detail'),
-    path('edit/', views.redirect_edit, name='edit'),
+    path('product/<int:pk>/edit/', views.EditProduct.as_view(), name='product-edit'),
+    path('product/add/', views.AddProduct.as_view(), name='product-add'),
+    path('product/<int:pk>/delete/', views.DeleteProduct.as_view(), name='product-delete'),
     path('', views.home, name='all-products'),
 ]

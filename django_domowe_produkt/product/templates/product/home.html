@@ -14,7 +14,8 @@
                         <p>Not available</p>
                     {% endif %}
                     {% if user.is_authenticated %}
-                        <a href="{% url 'edit' %}"><button class="btn btn-info">Edit</button></a>
+                        <a href="{% url 'product-edit' product.id %}"><button class="btn btn-dark">Edit</button></a>
+                        <a href="{% url 'product-delete' product.id %}"><button class="btn btn-danger">Delete</button></a>
                     {% endif %}
               </div>
           </article>
